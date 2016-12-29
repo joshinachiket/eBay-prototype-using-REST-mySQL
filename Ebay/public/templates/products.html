@@ -1,0 +1,24 @@
+<div style="background-image: url(/images/shopping.jpg);" class="item div-align" ng-controller="cart">
+	<div>
+		<table class="table">
+			<tr>
+				<th>PRODUCT NAME</th>
+				<th>PRODUCT ID</th>
+				<th>PRODUCT PRICE</th>
+				<th>PRODUCT DESCRIPTION</th>
+				<th>NUMBER OF PRODUCTS</th>
+				<th>ADD TO CART</th>
+			</tr>
+			<tr ng-repeat="product in products">
+				<td>{{product.pname}}</td>
+				<td>{{product.pid}}</td>
+				<td>{{product.pprize}}</td>
+				<td>{{product.pdesc}}</td>
+				<td>{{product.totprod}}</td>
+				<td><button name="ADD TO CART" ng-click="addToCart(product.pid)" type="submit"
+											class="btn btn-primary">ADD TO CART</button></td>
+			</tr>
+		</table>
+
+	</div>
+</div>
